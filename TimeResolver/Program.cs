@@ -2,7 +2,7 @@
 {
     class Mainer
     {
-        public static void Main()
+        static void Main()
         {
             // Принятие данных
             //var reciever = Factory.CreateReceiver();
