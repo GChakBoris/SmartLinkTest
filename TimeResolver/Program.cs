@@ -9,7 +9,8 @@
             //var reciever = new Reciever();
             while (true)
             {
-                string information = Rabbit.Recieve("timeQueue");
+                var rabbit = new Rabbit();
+                string information = rabbit.Recieve("timeQueue");
                 //if (!CheckEmptyLine(information))
                 {
                     // Обработка данных
@@ -17,7 +18,7 @@
                     //var resolver = new Resolver(reciever.information);
                     Task.Run(() =>
                     {
-                        Rabbit.Send(Resolver.Resolve(information), $"{information}Queue");
+                        rabbit.Send(Resolver.Resolve(information), $"{information}Queue");
                     }
                     );
                 }

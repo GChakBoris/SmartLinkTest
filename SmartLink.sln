@@ -11,13 +11,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocationResolver", "Locatio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimeResolver", "TimeResolver\TimeResolver.csproj", "{811B3C57-C784-4127-97C5-D2BE2AD92231}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dllSendLink", "dllSendLink\dllSendLink.csproj", "{9CB3E63C-F2AA-4C64-87B8-77E29CADDC3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dllSendLink", "dllSendLink\dllSendLink.csproj", "{9CB3E63C-F2AA-4C64-87B8-77E29CADDC3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocationTest", "LocationSend\LocationTest.csproj", "{A7E9C6EC-ACFA-44DF-828D-D794CC202C62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocationTest", "LocationSend\LocationTest.csproj", "{A7E9C6EC-ACFA-44DF-828D-D794CC202C62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTest", "TimeTest\TimeTest.csproj", "{D69A0842-B428-4596-ACCF-4B2D6890C2F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimeTest", "TimeTest\TimeTest.csproj", "{D69A0842-B428-4596-ACCF-4B2D6890C2F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dllSendLinkTest", "dllSendLinkTest\dllSendLinkTest.csproj", "{FDD395BA-D16D-4727-94FA-AFDA71AB146C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dllSendLinkTest", "dllSendLinkTest\dllSendLinkTest.csproj", "{FDD395BA-D16D-4727-94FA-AFDA71AB146C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rabbit", "Rabbit\Rabbit.csproj", "{C81478F9-6733-4AD3-B7A8-BB3BFF47358A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{FDD395BA-D16D-4727-94FA-AFDA71AB146C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDD395BA-D16D-4727-94FA-AFDA71AB146C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDD395BA-D16D-4727-94FA-AFDA71AB146C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C81478F9-6733-4AD3-B7A8-BB3BFF47358A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C81478F9-6733-4AD3-B7A8-BB3BFF47358A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C81478F9-6733-4AD3-B7A8-BB3BFF47358A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C81478F9-6733-4AD3-B7A8-BB3BFF47358A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
