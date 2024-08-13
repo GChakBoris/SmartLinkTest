@@ -24,7 +24,7 @@ namespace SmartLinkTest
             Assert.IsFalse(check);
         }
         [TestMethod]
-        [ExpectedException(typeof(Exception), "Ошибка с получением локации")]
+        [ExpectedException(typeof(Exception), "Location error")]
         public void TestHandleLocationReceiveError()
         {
             var mock = new Mock<IRabbit>();
@@ -50,7 +50,7 @@ namespace SmartLinkTest
             Assert.AreEqual("aaaa", handler.information);
         }
         [TestMethod]
-        [ExpectedException(typeof(Exception), "Ошибка с получением локации")]
+        [ExpectedException(typeof(Exception), "Location error")]
         public void TestHandleLocationHandleError()
         {
             var mock = new Mock<IRabbit>();
@@ -74,7 +74,7 @@ namespace SmartLinkTest
             Assert.AreEqual("bbbb", handler.information);
         }
         [TestMethod]
-        [ExpectedException(typeof(Exception), "Ошибка с получением времени")]
+        [ExpectedException(typeof(Exception), "Time error")]
         public void TestHandleTimeRecieveError()
         {
             var mock = new Mock<IRabbit>();

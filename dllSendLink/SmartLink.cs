@@ -8,13 +8,13 @@ namespace SmartLink
         {
             {"1", new Dictionary<string, string>
             {
-                {"1", "Первый вариант" },
-                {"2", "Второй вариант" }
+                {"1", "First link" },
+                {"2", "Second link" }
             }
             },
             {"2", new Dictionary<string, string>
             {
-                {"1", "Третий варинат" }
+                {"1", "Third link" }
             }
             }
         };
@@ -33,7 +33,7 @@ namespace SmartLink
             }
             catch
             {
-                result = "Стандартная ссылка";
+                result = "Standart link";
             }
             return result;
         }

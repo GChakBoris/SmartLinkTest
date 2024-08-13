@@ -44,14 +44,14 @@ namespace dllSendLinkTest
         {
             var mainer = new Mainer();
             string position = mainer.GetLink("{location=1, time=1}");
-            Assert.AreEqual("Первый вариант", position);
+            Assert.AreEqual("First link", position);
         }
         [TestMethod]
         public void TestGetLink22()
         {
             var mainer = new Mainer();
             string position = mainer.GetLink("{location=2, time=2}");
-            Assert.AreEqual("Стандартная ссылка", position);
+            Assert.AreEqual("Standart link", position);
         }
     }
 }
