@@ -153,4 +153,4 @@ jobs:
       uses: coverallsapp/github-action@master   
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }} 
-        path-to-lcov: dllSendLinkTest/TestResults/coverage.info
+        path-to-lcov: TimeTest/TestResults/coverage.info
