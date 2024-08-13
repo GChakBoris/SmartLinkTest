@@ -1,4 +1,5 @@
 using SmartLink;
+using System.Reflection.Metadata;
 namespace TimeTest
 {
     [TestClass]
@@ -57,6 +58,12 @@ namespace TimeTest
         {
             string information = Resolver.Resolve("{time=13:00:00}");
             Assert.AreEqual("{time=1}", information);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public void TestMain()
+        {
+            Mainer.Main();
         }
     }
 }

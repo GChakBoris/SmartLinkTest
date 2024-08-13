@@ -1,4 +1,5 @@
 using SmartLink;
+using System.Reflection.Metadata;
 namespace LocationSend
 {
     [TestClass]
@@ -57,6 +58,12 @@ namespace LocationSend
         {
             string information = Resolver.Resolve(null);
             Assert.AreEqual(null, information);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public void TestMain()
+        {
+            Mainer.Main();
         }
     }
 }

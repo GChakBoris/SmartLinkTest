@@ -125,5 +125,11 @@ namespace SmartLinkTest
             var locationHandler = new Rabbit();
             Assert.AreEqual(create.GetType(), locationHandler.GetType());
         }
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public void TestMain()
+        {
+            Mainer.Main();
+        }
     }
 }

@@ -1,8 +1,8 @@
 ﻿namespace SmartLink
 {
-    class Mainer
+    public class Mainer
     {
-        static void Main()
+        public static void Main()
         {
             // Принятие данных
             //var reciever = Factory.CreateReceiver();
