@@ -124,3 +124,33 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }} 
         path-to-lcov: dllSendLinkTest/TestResults/coverage.info
+    - name: Run automated unit and integration tests
+      run: dotnet test LocationSend/LocationTest.csproj 
+        /p:CollectCoverage=true 
+        /p:CoverletOutput=TestResults/ 
+        /p:CoverletOutputFormat=lcov
+    - name: Publish coverage report to coveralls.io   
+      uses: coverallsapp/github-action@master   
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }} 
+        path-to-lcov: LocationSend/TestResults/coverage.info
+    - name: Run automated unit and integration tests
+      run: dotnet test SmartLinkTest/SmartLinkTest.csproj 
+        /p:CollectCoverage=true 
+        /p:CoverletOutput=TestResults/ 
+        /p:CoverletOutputFormat=lcov
+    - name: Publish coverage report to coveralls.io   
+      uses: coverallsapp/github-action@master   
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }} 
+        path-to-lcov: dllSendLinkTest/TestResults/coverage.info
+    - name: Run automated unit and integration tests
+      run: dotnet test TimeTest/TimeTest.csproj 
+        /p:CollectCoverage=true 
+        /p:CoverletOutput=TestResults/ 
+        /p:CoverletOutputFormat=lcov
+    - name: Publish coverage report to coveralls.io   
+      uses: coverallsapp/github-action@master   
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }} 
+        path-to-lcov: dllSendLinkTest/TestResults/coverage.info
