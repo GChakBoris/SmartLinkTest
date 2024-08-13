@@ -30,7 +30,7 @@ namespace SmartLink
                             var locationHandler = Factory.CreateLocationHandler(timeHandler, rabbit);
                             locationHandler.information = information;
                             locationHandler.Handle();
-                            // функция для выбора корректной ссылки. Сделать через динамически подгружаемую библиотеку
+                            // функция для выбора корректной ссылки. Сделать через динамически подгружаемую библиотеку  asd
                             var linkSender = Factory.CreateSendLink(timeHandler.information, information, rabbit);
                             linkSender.Execute();
                         }
