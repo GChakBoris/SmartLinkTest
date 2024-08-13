@@ -16,7 +16,7 @@ namespace SmartLink
             {
                 var rabbit = Factory.CreateRabbit();
                 string information = rabbit.Recieve("MainLine");
-                if (!CheckEmptyLine(information))
+                if ($"{information}".Length != 0)
                 {
                     // Обработка данных
                     //var resolver = Factory.CreateResolver(reciever.information);

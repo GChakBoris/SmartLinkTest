@@ -52,5 +52,11 @@ namespace LocationSend
             string information = Resolver.Resolve("{location=ops}");
             Assert.AreEqual("{location=2}", information);
         }
+        [TestMethod]
+        public void TestResolverNichego()
+        {
+            string information = Resolver.Resolve(null);
+            Assert.AreEqual(null, information);
+        }
     }
 }

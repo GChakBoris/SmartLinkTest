@@ -11,7 +11,7 @@
             {
                 var rabbit = new Rabbit();
                 string information = rabbit.Recieve("locationQueue");
-                if (!CheckEmptyLine(information))
+                if ($"{information}".Length != 0)
                 {
                     // Обработка данных
                     //var resolver = Factory.CreateResolver(reciever.information);
@@ -24,17 +24,6 @@
                 }
             }
             // Обратная отсылка
-        }
-        public static bool CheckEmptyLine(string information)
-        {
-            if (information.Length == 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
         }
     }
     public class Resolver

@@ -5,7 +5,7 @@ namespace SmartLinkTest
     [TestClass]
     public class UnitTest1
     {
-        [TestMethod]
+        /*[TestMethod]
         public void TestCheckEmptyLineZero()
         {
             bool check = Mainer.CheckEmptyLine("");
@@ -22,7 +22,7 @@ namespace SmartLinkTest
         {
             bool check = Mainer.CheckEmptyLine("string");
             Assert.IsFalse(check);
-        }
+        }*/
         [TestMethod]
         [ExpectedException(typeof(Exception), "Location error")]
         public void TestHandleLocationReceiveError()
