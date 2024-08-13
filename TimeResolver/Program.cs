@@ -22,7 +22,7 @@
                     );
                 }
             }
-            // Обратная отсылка
+            // Обратная отсылка 
         }
         /*public static bool CheckEmptyLine(string information)
         {
