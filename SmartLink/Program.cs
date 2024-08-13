@@ -43,17 +43,6 @@ namespace SmartLink
                 }
             }
         }
-        public static bool CheckEmptyLine(string information)
-        {
-            if ($"{information}".Length == 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
     }
     interface ICommand
     {
@@ -284,9 +273,9 @@ namespace SmartLink
     //}
     public class SendLink : ICommand
     {
-        private IRabbit _rabbit;
-        private string _information;
-        private string _original_information;
+        public IRabbit _rabbit;
+        public string _information;
+        public string _original_information;
         public SendLink(string information, string original_information, IRabbit rabbit)
         {
             _information = information;

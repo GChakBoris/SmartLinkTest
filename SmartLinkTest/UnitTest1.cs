@@ -84,5 +84,46 @@ namespace SmartLinkTest
             handler.information = "aaaa";
             handler.Handle();
         }
+        [TestMethod]
+        public void TestCreateLocationHandler()
+        {
+            var mock = new Mock<IHandler>();
+            var mock1 = new Mock<IRabbit>();
+            var create = Factory.CreateLocationHandler(mock.Object, mock1.Object);
+            var locationHandler = new HandleLocation(null, null);
+            Assert.AreEqual(create.GetType(), locationHandler.GetType());
+            Assert.AreEqual(create._rabbit, mock1.Object);
+            Assert.AreEqual(create.handler, mock.Object);
+        }
+        [TestMethod]
+        public void TestCreateSendLink()
+        {
+            var mock1 = new Mock<IRabbit>();
+            var create = Factory.CreateSendLink("1", "2", mock1.Object);
+            var locationHandler = new SendLink(null, null, null);
+            Assert.AreEqual(create.GetType(), locationHandler.GetType());
+            Assert.AreEqual(create._original_information, "2");
+            Assert.AreEqual(create._information, "1");
+            Assert.AreEqual(create._rabbit, mock1.Object);
+        }
+        [TestMethod]
+        public void TestCreateTimeHandler()
+        {
+            var mock1 = new Mock<IRabbit>();
+            var create = Factory.CreateTimeHandler(mock1.Object);
+            var locationHandler = new HandleTime(null, null);
+            Assert.AreEqual(create.GetType(), locationHandler.GetType());
+            Assert.AreEqual(create._rabbit, mock1.Object);
+            Assert.AreEqual(create.handler, null);
+        }
+        [TestMethod]
+        public void TestCreateRabbit()
+        {
+            var mock = new Mock<IHandler>();
+            var mock1 = new Mock<IRabbit>();
+            var create = Factory.CreateRabbit();
+            var locationHandler = new Rabbit();
+            Assert.AreEqual(create.GetType(), locationHandler.GetType());
+        }
     }
 }
