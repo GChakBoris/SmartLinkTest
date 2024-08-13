@@ -126,10 +126,18 @@ namespace SmartLinkTest
             Assert.AreEqual(create.GetType(), locationHandler.GetType());
         }
         [TestMethod]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(Exception), "Ошибка с получением подключения")]
         public void TestMain()
         {
             Mainer.Main();
+        }
+        [TestMethod]
+        //[ExpectedException(typeof(Exception))]
+        public void TestSendLink()
+        {
+            var mock1 = new Mock<IRabbit>();
+            var sendLink = Factory.CreateSendLink("1","2",mock1.Object);
+            sendLink.Execute();
         }
     }
 }

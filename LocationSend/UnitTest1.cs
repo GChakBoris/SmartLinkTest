@@ -60,7 +60,7 @@ namespace LocationSend
             Assert.AreEqual(null, information);
         }
         [TestMethod]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(Exception), "Ошибка с получением подключения")]
         public void TestMain()
         {
             Mainer.Main();

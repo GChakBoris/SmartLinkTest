@@ -60,7 +60,7 @@ namespace TimeTest
             Assert.AreEqual("{time=1}", information);
         }
         [TestMethod]
-        [ExpectedException(typeof(Exception))]
+        [ExpectedException(typeof(Exception), "Ошибка с получением подключения")]
         public void TestMain()
         {
             Mainer.Main();
